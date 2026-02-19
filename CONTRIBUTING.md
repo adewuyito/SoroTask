@@ -17,6 +17,12 @@ Thanks for contributing to SoroTask. This project is split into three parts:
 4. Run formatting/lint checks before opening a PR.
 5. Open a Pull Request using the PR template.
 
+## What to Change Where
+
+- Contract behavior and task execution rules: `contract/`
+- Off-chain polling/execution logic: `keeper/`
+- Dashboard, UX, and wallet interactions: `frontend/`
+
 ## Local Setup
 
 ### Contract
@@ -61,6 +67,17 @@ npm run lint
 ```
 
 If you changed both Rust and frontend code, run both checks.
+
+### Keeper (Node.js)
+
+The keeper package currently has no lint script. For keeper changes, run a local smoke test:
+
+```bash
+cd keeper
+node index.js
+```
+
+Confirm startup logs appear without immediate runtime errors.
 
 ## Pull Request Expectations
 
